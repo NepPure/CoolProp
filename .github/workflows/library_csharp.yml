@@ -44,7 +44,7 @@ jobs:
         echo COOLPROP_VERSION=$COOLPROP_VERSION >> $GITHUB_ENV
 
     - name: Configure CMake
-      run: cmake -B build -S . -DCOOLPROP_CSHARP_MODULE=ON -COOLPROP_NO_EXAMPLES=OFF -DCMAKE_BUILD_TYPE:STRING=${{ env.BUILD_TYPE }}
+      run: cmake -B build -S . -DCOOLPROP_CSHARP_MODULE=ON -COOLPROP_NO_EXAMPLES -DCMAKE_BUILD_TYPE:STRING=${{ env.BUILD_TYPE }}
 
     - name: Build
       run: cmake --build build --target install -j $(nproc) --config ${{ env.BUILD_TYPE }}
