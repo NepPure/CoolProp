@@ -19,8 +19,7 @@ jobs:
       # fail-fast: Default is true, switch to false to allow one platform to fail and still run others
       fail-fast: false
       matrix:
-        os: [ubuntu-latest]
-        architecture: [arm64, amd64]
+        os: [ubuntu-latest, self-hosted]
 
     steps:
     - uses: actions/checkout@v3
@@ -56,5 +55,5 @@ jobs:
     - name: Archive artifacts
       uses: actions/upload-artifact@v3
       with:
-          name: csharp-${{ matrix.os }}-${{ matrix.architecture }}
+          name: csharp-${{ matrix.os }}
           path: install_root
