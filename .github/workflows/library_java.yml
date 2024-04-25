@@ -1,4 +1,4 @@
-name: Library builds (csharp)
+name: Library builds (java)
 
 on:
   push:
