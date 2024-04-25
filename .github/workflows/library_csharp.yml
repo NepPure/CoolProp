@@ -54,5 +54,5 @@ jobs:
     - name: Archive artifacts
       uses: actions/upload-artifact@v3
       with:
-          name: csharp-${{ matrix.os }}-${{ matrix.arch }}
+          name: csharp-${{ runner.os }}-${{ runner.architecture }}
           path: install_root
