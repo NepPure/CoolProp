@@ -29,9 +29,9 @@ jobs:
     - name: Display system info
       run: uname -a
 
-    - uses: actions/setup-python@v4
-      with:
-        python-version: '3.x'
+    # - uses: actions/setup-python@v4
+    #   with:
+    #     python-version: '3.x'
 
     - name: Install Python dependencies
       run: |
