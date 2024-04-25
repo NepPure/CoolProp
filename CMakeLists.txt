@@ -1517,10 +1517,10 @@ if(COOLPROP_JAVA_MODULE)
     endif()
   endif()
 
-  if(NOT MSVC)
-    set_target_properties(CoolProp PROPERTIES COMPILE_FLAGS "-m${BITNESS}"
-                                              LINK_FLAGS "-m${BITNESS}")
-  endif()
+  #if(NOT MSVC)
+  #  set_target_properties(CoolProp PROPERTIES COMPILE_FLAGS "-m${BITNESS}"
+  #                                            LINK_FLAGS "-m${BITNESS}")
+  #endif()
 
   add_dependencies(${app_name} generate_headers generate_examples)
 
