@@ -52,5 +52,5 @@ jobs:
     - name: Archive artifacts
       uses: actions/upload-artifact@v3
       with:
-          name: shared_library
-          path: install_root/shared_library
+          name: library
+          path: build
