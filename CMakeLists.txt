@@ -1316,12 +1316,12 @@ if(COOLPROP_CSHARP_MODULE)
 
   add_dependencies(${app_name} generate_headers generate_examples)
 
-  add_custom_command(
-    TARGET CoolProp
-    POST_BUILD
-    COMMAND 7z a "${CMAKE_CURRENT_BINARY_DIR}/platform-independent.7z"
-            "${CMAKE_CURRENT_BINARY_DIR}/*.cs" -x!Example.cs
-    WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}")
+  #add_custom_command(
+   # TARGET CoolProp
+    #POST_BUILD
+    #COMMAND 7z a "${CMAKE_CURRENT_BINARY_DIR}/platform-independent.7z"
+     #       "${CMAKE_CURRENT_BINARY_DIR}/*.cs" -x!Example.cs
+    #WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}")
   #add_custom_command(TARGET CoolProp
   #                   POST_BUILD
   #                   COMMAND "${PYTHON_EXECUTABLE}" example_generator.py Csharp "${CMAKE_CURRENT_BINARY_DIR}/Example.cs"
@@ -1524,12 +1524,12 @@ if(COOLPROP_JAVA_MODULE)
 
   add_dependencies(${app_name} generate_headers generate_examples)
 
-  add_custom_command(
-    TARGET CoolProp
-    POST_BUILD
-    COMMAND 7z a "${CMAKE_CURRENT_BINARY_DIR}/platform-independent.7z"
-            "${CMAKE_CURRENT_BINARY_DIR}/*.java" -x!Example.java
-    WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}")
+ # add_custom_command(
+  #  TARGET CoolProp
+   # POST_BUILD
+   # COMMAND 7z a "${CMAKE_CURRENT_BINARY_DIR}/platform-independent.7z"
+   #         "${CMAKE_CURRENT_BINARY_DIR}/*.java" -x!Example.java
+   # WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}")
   #add_custom_command(TARGET CoolProp
   #                   POST_BUILD
   #                   COMMAND "${PYTHON_EXECUTABLE}" example_generator.py Java "${CMAKE_CURRENT_BINARY_DIR}/Example.java"
