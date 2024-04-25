@@ -32,7 +32,6 @@ jobs:
 
     - name: Install Python dependencies
       run: |
-        apt-get install swig mono-mcs mono-runtime
         python -m pip install --upgrade pip
         python -m pip install requests packaging six
 
