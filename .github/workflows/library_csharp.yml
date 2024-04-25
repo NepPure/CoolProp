@@ -19,7 +19,7 @@ jobs:
       # fail-fast: Default is true, switch to false to allow one platform to fail and still run others
       fail-fast: false
       matrix:
-        os: [ubuntu-latest,ubuntu-latest]
+        os: [ubuntu-latest]
         architecture: [arm64, amd64]
 
     steps:
