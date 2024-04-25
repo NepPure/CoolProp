@@ -1326,9 +1326,9 @@ if(COOLPROP_CSHARP_MODULE)
   #                   POST_BUILD
   #                   COMMAND "${PYTHON_EXECUTABLE}" example_generator.py Csharp "${CMAKE_CURRENT_BINARY_DIR}/Example.cs"
   #                   WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/dev/scripts/examples")
-  install(FILES "${CMAKE_CURRENT_BINARY_DIR}/Example.cs" DESTINATION Csharp)
-  install(FILES "${CMAKE_CURRENT_BINARY_DIR}/platform-independent.7z"
-          DESTINATION ${CMAKE_INSTALL_PREFIX}/Csharp)
+  #install(FILES "${CMAKE_CURRENT_BINARY_DIR}/Example.cs" DESTINATION Csharp)
+  #install(FILES "${CMAKE_CURRENT_BINARY_DIR}/platform-independent.7z"
+  #        DESTINATION ${CMAKE_INSTALL_PREFIX}/Csharp)
   install(TARGETS ${app_name}
           DESTINATION Csharp/${CMAKE_SYSTEM_NAME}_${BITNESS}bit)
   enable_testing()
@@ -1536,14 +1536,14 @@ if(COOLPROP_JAVA_MODULE)
   #                   WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/dev/scripts/examples")
   #
   # Install all the generated java files
-  install(
-    CODE "file( GLOB _GeneratedJavaSources \"${CMAKE_CURRENT_BINARY_DIR}/*.java\" )"
-    CODE "file( INSTALL \${_GeneratedJavaSources} DESTINATION ${CMAKE_INSTALL_PREFIX}/Java/platform-independent )"
-  )
-  install(FILES "${CMAKE_CURRENT_BINARY_DIR}/Example.java"
-          DESTINATION ${CMAKE_INSTALL_PREFIX}/Java)
-  install(FILES "${CMAKE_CURRENT_BINARY_DIR}/platform-independent.7z"
-          DESTINATION ${CMAKE_INSTALL_PREFIX}/Java)
+  #install(
+   # CODE "file( GLOB _GeneratedJavaSources \"${CMAKE_CURRENT_BINARY_DIR}/*.java\" )"
+   # CODE "file( INSTALL \${_GeneratedJavaSources} DESTINATION ${CMAKE_INSTALL_PREFIX}/Java/platform-independent )"
+  #)
+  #install(FILES "${CMAKE_CURRENT_BINARY_DIR}/Example.java"
+  #        DESTINATION ${CMAKE_INSTALL_PREFIX}/Java)
+  #install(FILES "${CMAKE_CURRENT_BINARY_DIR}/platform-independent.7z"
+  #        DESTINATION ${CMAKE_INSTALL_PREFIX}/Java)
   install(
     TARGETS ${app_name}
     DESTINATION ${CMAKE_INSTALL_PREFIX}/Java/${CMAKE_SYSTEM_NAME}_${BITNESS}bit)
